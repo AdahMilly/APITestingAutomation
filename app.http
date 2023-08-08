@@ -1,0 +1,66 @@
+POST http://localhost:4500/project
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMzYWE4MTliLTU5ZWMtNDFkNC05MTRjLTNmNjZmYzY0MmQ0YyIsImVfbmFtZSI6IlBhdWwgTnlhbWF3aSIsImVtYWlsIjoicGF1bC5ueWFtYXdpQHRoZWppdHUuY29tIiwicHJvZmlsZSI6Imh0dHBzOi8vY2RuLnBpeGFiYXkuY29tL3Bob3RvLzIwMTgvMDcvMzEvMjEvNTgvbGlvbi0zNTc2MDMxXzY0MC5qcGciLCJyb2xlIjoidXNlciIsImlzc2VudCI6ZmFsc2UsImlhdCI6MTY5MDg3MTA3NCwiZXhwIjoxNjkwOTA3MDc0fQ.0VQISZ-ZoJRO9URQv3ypBe02JgTGDwFiLmXtNx0yPCk
+
+{
+    "project_name": "Build Dam",
+    "description":"Build a Dam capable of holding 40000 litres",
+    "project_location":"Nyeri",
+    "startdate":"2023-7-25",
+    "enddate":"2023/7/25"
+}
+
+### GET ALL PROJECTS
+GET http://localhost:4500/project
+
+### GET ONE PROJECT
+GET http://localhost:4500/project/7ee646b3-a5bc-4bcf-b216-973aae1641a6
+
+### UPDATING PROJECT
+PUT http://localhost:4500/project/7ee646b3-a5bc-4bcf-b216-973aae1641a6
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMzYWE4MTliLTU5ZWMtNDFkNC05MTRjLTNmNjZmYzY0MmQ0YyIsImVfbmFtZSI6IlBhdWwgTnlhbWF3aSIsImVtYWlsIjoicGF1bC5ueWFtYXdpQHRoZWppdHUuY29tIiwicHJvZmlsZSI6Imh0dHBzOi8vY2RuLnBpeGFiYXkuY29tL3Bob3RvLzIwMTgvMDcvMzEvMjEvNTgvbGlvbi0zNTc2MDMxXzY0MC5qcGciLCJyb2xlIjoidXNlciIsImlzc2VudCI6ZmFsc2UsImlhdCI6MTY5MDg3MTA3NCwiZXhwIjoxNjkwOTA3MDc0fQ.0VQISZ-ZoJRO9URQv3ypBe02JgTGDwFiLmXtNx0yPCk
+
+{
+    "project_name": "Build A bridge",
+    "description":"Build the nithi bridge",
+    "project_location":"Tharaka Nithi",
+    "startdate":"2023-7-25",
+    "enddate":"2023-8-25"
+}
+
+###
+DELETE http://localhost:4500/project/910b14c2-769c-4c9e-a1b5-ca5079fe500c
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMzYWE4MTliLTU5ZWMtNDFkNC05MTRjLTNmNjZmYzY0MmQ0YyIsImVfbmFtZSI6IlBhdWwgTnlhbWF3aSIsImVtYWlsIjoicGF1bC5ueWFtYXdpQHRoZWppdHUuY29tIiwicHJvZmlsZSI6Imh0dHBzOi8vY2RuLnBpeGFiYXkuY29tL3Bob3RvLzIwMTgvMDcvMzEvMjEvNTgvbGlvbi0zNTc2MDMxXzY0MC5qcGciLCJyb2xlIjoidXNlciIsImlzc2VudCI6ZmFsc2UsImlhdCI6MTY5MDg3MTA3NCwiZXhwIjoxNjkwOTA3MDc0fQ.0VQISZ-ZoJRO9URQv3ypBe02JgTGDwFiLmXtNx0yPCk
+
+
+
+
+
+
+
+
+
+#### EMPLOYEE ROUTES
+POST http://localhost:4500/employee/register
+Content-Type: application/json
+
+{
+    "e_name": "Paul Nyamawi",
+    "email": "paul.nyamawi@thejitu.com",
+    "profile": "https://cdn.pixabay.com/photo/2018/07/31/21/58/lion-3576031_640.jpg",
+    "password": "12345678"
+}
+
+### LOGIN
+POST http://localhost:4500/employee/login
+Content-Type: application/json
+
+{
+    "email": "paul.nyamawi@thejitu.com",
+    "password": "12345678"
+}
+
+### READ TOKEN
+GET http://localhost:4500/employee/check
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA3YzI1OThmLTNjNWQtNGU1ZS1hNzhkLWRhOWMxNjI0YTZiZiIsImVfbmFtZSI6IlBhdWwgU2FuZ2EiLCJlbWFpbCI6InBhdWwubnlhbWF3aUB0aGVqaXR1LmNvbSIsInJvbGUiOiJ1c2VyIiwiaXNzZW50Ijp0cnVlLCJwcm9maWxlIjpudWxsLCJpYXQiOjE2OTA0NDc5NDksImV4cCI6MTY5MDQ4Mzk0OX0.P-yp3CPT3EGK4rsEOLwmjm2tV7cqoQsPppmXwHqZfEY
